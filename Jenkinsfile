@@ -41,7 +41,9 @@ pipeline {
 
         stage ('Build Image') {
             steps {
-                docker.build("mhkrhn/mkbrief14")
+                script {
+                    docker.build("mhkrhn/mkbrief14")
+                }    
             }
         }    
         stage ('Push Image') {
