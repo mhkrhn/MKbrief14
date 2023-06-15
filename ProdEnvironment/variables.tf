@@ -5,7 +5,7 @@ variable "subscription_id" {
 
 #variable "client_id" {
 #   description = "Azure Client ID"
-#   default = "384ba4e4-fc1a-47f4-bf42-acec6fad1e82"
+#   default = "fa1bebef-0a40-4dc3-bc86-572f8a3142b4"
 #}
 
 #variable "client_secret" {
