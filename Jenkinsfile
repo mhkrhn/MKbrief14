@@ -6,7 +6,7 @@ node {
                  remote.password = 'Karahan507144'
                  remote.allowAnyHosts = true
                  stage('Remote SSH') {
-                 sshCommand remote: remote, command: "docker run -d -p 1137:1337 mhkrhn/jenktest"
+                 sshCommand remote: remote, command: "docker run -d -p 1337:1337 mhkrhn/jenktest"
             }
         }  
 pipeline {
