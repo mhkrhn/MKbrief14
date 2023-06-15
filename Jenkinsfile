@@ -34,15 +34,18 @@ pipeline {
         
 
         stage ('Clone') {
-            checkout scm
-        }
+            steps {
+                checkout scm
+            }
 
         stage ('Build Image') {
-            docker.build("mhkrhn/mkbrief14")
+            steps {
+                docker.build("mhkrhn/mkbrief14")
         }
         stage ('Push Image') {
-            sh 'docker login -u mhkrhn -p dckr_pat_nMkCbhcdZJxwHULLUidN83YRK-k'
-            sh 'docker push mhkrhn/mkbrief14'
+            steps {
+                sh "docker login -u mhkrhn -p dckr_pat_nMkCbhcdZJxwHULLUidN83YRK-k"
+                sh "docker push mhkrhn/mkbrief14"
     }
     }    
     }
