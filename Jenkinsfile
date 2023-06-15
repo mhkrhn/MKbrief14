@@ -54,6 +54,7 @@ pipeline {
         }
     }
 node {
+        stage ('Log') {
                  def remote = [:]
                  remote.name = 'mkjenkinsvm'
                  remote.host = '51.103.70.96'
@@ -63,6 +64,7 @@ node {
                  stage('Remote SSH') {
                  sshCommand remote: remote, command: "docker run -d -p 1137:1337 mhkrhn/jenktest"
             }
+        }  
         }
 }
 
