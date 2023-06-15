@@ -34,16 +34,16 @@ pipeline {
         
 node{
 
-    stage('Clone') {
+    stage ('Clone') {
         checkout scm
     }
 
     stage ('Build Image') {
-        docker.build("mowqa/doom")
+        docker.build("mhkrhn/mkbrief14")
     }
     stage ('Push Image') {
-        sh 'docker login -u mowqa -p dckr_pat_is0y3bHt8AoE6BLlA7sv3NaKJMI'
-        sh 'docker push mowqa/doom'
+        sh 'docker login -u mhkrhn -p dckr_pat_nMkCbhcdZJxwHULLUidN83YRK-k'
+        sh 'docker push mhkrhn/mkbrief14'
     }
     }    
     }
