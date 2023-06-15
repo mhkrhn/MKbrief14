@@ -37,6 +37,7 @@ pipeline {
             steps {
                 checkout scm
             }
+        }
 
         stage ('Build Image') {
             steps {
