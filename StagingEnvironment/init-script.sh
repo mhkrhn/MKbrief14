@@ -9,4 +9,4 @@ sudo curl -fsSL https://get.docker.com/ -o init-script.sh
 sudo sh init-script.sh
 
 sudo wget https://github.com/mhkrhn/MKbrief14.git
-sudo docker run -d --name mktest13 -p 8080:80 nginx
+sudo docker run -d --name mktest13 -p 1234:80 app.py
