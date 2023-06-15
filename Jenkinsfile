@@ -1,8 +1,3 @@
-   env:
-      ARM_CLIENT_ID: ${{ secrets.TF_VAR_ARM_CLIENT_ID }}
-      ARM_CLIENT_SECRET: ${{ secrets.TF_VAR_ARM_CLIENT_SECRET }}
-      ARM_SUBSCRIPTION_ID: ${{ secrets.TF_VAR_ARM_SUBSCRIPTION_ID }}
-      ARM_TENANT_ID: ${{ secrets.TF_VAR_ARM_TENANT_ID }}   
 pipeline {
     agent any
   
