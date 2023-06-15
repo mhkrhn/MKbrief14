@@ -32,18 +32,17 @@ pipeline {
             }
         } 
         
-node{
 
-    stage ('Clone') {
-        checkout scm
-    }
+        stage ('Clone') {
+            checkout scm
+        }
 
-    stage ('Build Image') {
-        docker.build("mhkrhn/mkbrief14")
-    }
-    stage ('Push Image') {
-        sh 'docker login -u mhkrhn -p dckr_pat_nMkCbhcdZJxwHULLUidN83YRK-k'
-        sh 'docker push mhkrhn/mkbrief14'
+        stage ('Build Image') {
+            docker.build("mhkrhn/mkbrief14")
+        }
+        stage ('Push Image') {
+            sh 'docker login -u mhkrhn -p dckr_pat_nMkCbhcdZJxwHULLUidN83YRK-k'
+            sh 'docker push mhkrhn/mkbrief14'
     }
     }    
     }
