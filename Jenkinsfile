@@ -42,4 +42,5 @@ pipeline {
                 sh 'docker push mhkrhn/mkbrief14'
     }
     }    
+    }
 }
