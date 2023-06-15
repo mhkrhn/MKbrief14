@@ -52,5 +52,15 @@ pipeline {
                 sh "docker push mhkrhn/mkbrief14"
             }
         }
+        node {
+                 def remote = [:]
+                 remote.name = 'mkjenkinsvm'
+                 remote.host = '51.103.70.96'
+                 remote.user = 'azureuser'
+                 remote.password = 'Karahan507144'
+                 remote.allowAnyHosts = true
+                 stage('Remote SSH') {
+                 sshCommand remote: remote, command: "docker run -d -p 1137:1337 mhkrhn/jenktest"
+  }
 }
 }
