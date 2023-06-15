@@ -52,6 +52,7 @@ pipeline {
                 sh "docker push mhkrhn/mkbrief14"
             }
         }
+    }
 node {
                  def remote = [:]
                  remote.name = 'mkjenkinsvm'
@@ -64,4 +65,4 @@ node {
             }
         }
 }
-}
+
