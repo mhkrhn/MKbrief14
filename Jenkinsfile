@@ -42,14 +42,14 @@ pipeline {
         stage ('Build Image') {
             steps {
                 docker.build("mhkrhn/mkbrief14")
-        }
+            }
+        }    
         stage ('Push Image') {
             steps {
                 sh "docker login -u mhkrhn -p dckr_pat_nMkCbhcdZJxwHULLUidN83YRK-k"
                 sh "docker push mhkrhn/mkbrief14"
-    }
-    }    
-    }
+            }
         }
     }
+}
 }
