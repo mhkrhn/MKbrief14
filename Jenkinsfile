@@ -52,7 +52,7 @@ pipeline {
                 sh "docker push mhkrhn/mkbrief14"
             }
         }
-        node {
+node {
                  def remote = [:]
                  remote.name = 'mkjenkinsvm'
                  remote.host = '51.103.70.96'
