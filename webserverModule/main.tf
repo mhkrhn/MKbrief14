@@ -1,5 +1,5 @@
 resource "azurerm_resource_group" "webserver" {
-   name = "mkbrief14staging"
+   name = "mktest"
    location = var.location
 }
 
