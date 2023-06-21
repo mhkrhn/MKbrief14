@@ -1,5 +1,5 @@
 resource "azurerm_resource_group" "webserver" {
-   name = "mktest"
+   name = "mktestprod"
    location = var.location
 }
 
